@@ -1,0 +1,77 @@
+/**
+ * @author Ahmadreza Shamimi
+ * @email [shentiaspirit@hotmail.com]
+ * @create date 2021-10-06 23:30:40
+ * @modify date 2021-10-07 00:14:26
+ * @desc [https://github.com/shentia]
+ */
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+:root {
+  --line-background-primary: #e67e22;
+  --line-background-secondary: #f39c12;
+  --line-background-third: #f39c12;
+  --btn-color: #2c3e50;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Muli", sans-serif;
+  margin: 0;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-image: linear-gradient(
+    90deg,
+    var(--line-background-secondary),
+    var(--line-background-third),
+    var(--line-background-primary)
+  );
+}
+
+.search {
+  position: relative;
+  height: 50px;
+}
+
+.search .input {
+  background-color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 400px;
+}
+
+.search.active .btn {
+  transform: translateX(350px);
+}
